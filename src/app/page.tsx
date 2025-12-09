@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <main>
       <Hero data={clinic} /> 
-      <Services services={services} />
+      <Services services={services} clinic={clinic}/>
       <WhyUs features={clinic.features} />
       <Doctor data={doctor} />   
       <Testimonials list={clinic.testimonials} />

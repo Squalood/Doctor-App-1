@@ -8,11 +8,12 @@ import Link from "next/link";
 
 type ServiceCardProps = {
   service: ClinicType["services"][number];
+  clinic: ClinicType;
   index?: number;
   inView?: boolean;
 };
 
-const ServiceCard = ({service, index = 0,inView = true,}: ServiceCardProps) => {
+const ServiceCard = ({service, clinic, index = 0,inView = true,}: ServiceCardProps) => {
 
   const imageUrl = service.image?.url || "/placeholder-image.webp";
 
@@ -43,7 +44,7 @@ const ServiceCard = ({service, index = 0,inView = true,}: ServiceCardProps) => {
 
       <div className="flex gap-1 sm:gap-4">
         <Button variant="outline" className="w-full z-10 px-3 sm:px-4" asChild>
-          <Link href="https://lymbika.com/clinics/clinica-de-neurologia">Ir a Lymbika</Link>
+          <Link href={`https://lymbika.com/clinics/${clinic.slug}`}>Ir a Lymbika</Link>
         </Button>
       </div>
     </Card>
