@@ -7,7 +7,6 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Process } from "@/components/Process";
 import { Services } from "@/components/Services";
-import { Testimonials } from "@/components/Testimonials";
 import { TravelSupport } from "@/components/TravelSupport";
 import { TrustStrip } from "@/components/TrustStrip";
 import { WhyChoose } from "@/components/WhyChoose";
@@ -29,7 +28,6 @@ export default function Home() {
         <Services onBookingClick={openBooking} />
         <WhyChoose />
         <Process />
-        <Testimonials/>
         <FAQ />
         <TravelSupport />
       </main>
