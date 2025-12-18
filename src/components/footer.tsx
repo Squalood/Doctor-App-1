@@ -46,7 +46,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li className="flex items-start gap-3 text-background/70">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>
                   Star Médica Ciudad Juárez<br />
                   Paseo de la Victoria 631, Partido Iglesias

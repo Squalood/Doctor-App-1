@@ -112,7 +112,7 @@ const ServiceCard = ({
       </div>
 
       {/* Benefit */}
-      <p className="text-muted-foreground text-sm flex-grow mb-6">{benefit}</p>
+      <p className="text-muted-foreground text-sm grow mb-6">{benefit}</p>
 
       {/* CTA */}
       <Button

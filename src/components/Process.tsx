@@ -38,7 +38,7 @@ export const Process = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Connection Line - Desktop */}
-          <div className="hidden md:block absolute top-16 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-gradient-to-r from-primary via-cta to-accent rounded-full" />
+          <div className="hidden md:block absolute top-16 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-linear-to-r from-primary via-cta to-accent rounded-full" />
 
           <div className="grid md:grid-cols-3 gap-8 md:gap-6">
             {steps.map((step, index) => (
@@ -50,7 +50,7 @@ export const Process = () => {
                 {/* Step Card */}
                 <div className="card-elevated p-6 text-center relative z-10">
                   {/* Icon Circle */}
-                  <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-primary to-cta flex items-center justify-center mb-6 shadow-lg">
+                  <div className="w-20 h-20 mx-auto rounded-2xl bg-linear-to-br from-primary to-cta flex items-center justify-center mb-6 shadow-lg">
                     <step.icon className="w-10 h-10 text-primary-foreground" />
                   </div>
 
@@ -69,7 +69,7 @@ export const Process = () => {
                 {/* Mobile Connection Line */}
                 {index < steps.length - 1 && (
                   <div className="md:hidden flex justify-center my-4">
-                    <div className="w-1 h-8 bg-gradient-to-b from-primary to-cta rounded-full" />
+                    <div className="w-1 h-8 bg-linear-to-b from-primary to-cta rounded-full" />
                   </div>
                 )}
               </div>

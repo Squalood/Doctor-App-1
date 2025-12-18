@@ -43,7 +43,7 @@ export const WhyChoose = () => {
                   className="flex gap-4 animate-fade-in-up opacity-0"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                     <feature.icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -80,7 +80,7 @@ export const WhyChoose = () => {
 
             {/* Video CTA */}
             <div
-              className="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary/10 to-cta/10 p-8 animate-slide-up opacity-0 group cursor-pointer"
+              className="relative overflow-hidden rounded-xl bg-linear-to-br from-primary/10 to-cta/10 p-8 animate-slide-up opacity-0 group cursor-pointer"
               style={{ animationDelay: '400ms' }}
             >
               <div className="flex items-center gap-4">
