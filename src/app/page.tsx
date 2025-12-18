@@ -1,16 +1,16 @@
 "use client";
 
-import { BookingModal } from "@/components/BookingModal";
-import { FAQ } from "@/components/FAQ";
-import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import { Process } from "@/components/Process";
-import { Services } from "@/components/Services";
-import { Testimonials } from "@/components/Testimonials";
-import { TravelSupport } from "@/components/TravelSupport";
-import { TrustStrip } from "@/components/TrustStrip";
-import { WhyChoose } from "@/components/WhyChoose";
-import { Header } from "@radix-ui/react-accordion";
+import { BookingModal } from "@/components/bookingModal";
+import { FAQ } from "@/components/fAQ";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { Process } from "@/components/process";
+import { Services } from "@/components/services";
+import { Testimonials } from "@/components/testimonials";
+import { TravelSupport } from "@/components/travelSupport";
+import { TrustStrip } from "@/components/trustStrip";
+import { WhyChoose } from "@/components/whyChoose";
 import { useState } from "react";
 
 export default function Home() {
