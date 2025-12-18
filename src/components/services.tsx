@@ -4,7 +4,6 @@ import {
   Syringe,
   Activity,
   Clock,
-  ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 

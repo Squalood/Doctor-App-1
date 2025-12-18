@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, MapPin, Video, Building } from "lucide-react";
+import { Calendar, MapPin, Video, Building } from "lucide-react";
 import Link from "next/link";
 
 export const Hero = () => {
