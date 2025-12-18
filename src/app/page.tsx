@@ -1,57 +1,42 @@
 "use client";
 
-import ClinicSkeleton from "@/components/clinicSkeleton";
-import Hero from "@/components/hero";
-import { useGetClinicServices } from "../api/useGetClinicsServiceBySlug";
-import { useGetClinic } from "@/api/useGetClinicsBySlug";
-import Services from "@/components/services";
-import WhyUs from "@/components/whyUs";
-import Doctor from "@/components/doctor";
-import { useGetClinicDoctor } from "@/api/useGetClinicsDoctorBySlug";
-import ClinicGallery from "@/components/clinicGallety";
-import Testimonials from "@/components/testimonials";
-import Contact from "@/components/contact";
+import { BookingModal } from "@/components/BookingModal";
+import { FAQ } from "@/components/FAQ";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { Process } from "@/components/Process";
+import { Services } from "@/components/Services";
+import { Testimonials } from "@/components/Testimonials";
+import { TravelSupport } from "@/components/TravelSupport";
+import { TrustStrip } from "@/components/TrustStrip";
+import { WhyChoose } from "@/components/WhyChoose";
+import { useState } from "react";
 
 export default function Home() {
-  const slug = "clinica-de-neurologia"; 
-  const { clinic, loading } = useGetClinic(slug);
-  const { DoctorClinic } = useGetClinicDoctor(slug)
-  const { ServicesClinic } = useGetClinicServices(slug);
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  if (loading) {
-    return <ClinicSkeleton />;
-  }
-
-  if (!clinic) {
-    return (
-      <div className="py-40 text-center">
-        <p className="text-destructive">Clínica no encontrada.</p>
-      </div>
-    );
-  }
-
-  if (!DoctorClinic || !DoctorClinic.doctor) {
-    return <p>No se encontró información del doctor.</p>;
-  }
-  const { doctor } = DoctorClinic;
-
-  if (!ServicesClinic || !ServicesClinic.services) {
-    return <p>No se encontró información de los servicios.</p>;
-  }
-  const { services } = ServicesClinic;
+  const openBooking = () => setIsBookingOpen(true);
+  const closeBooking = () => setIsBookingOpen(false);
 
   return (
-    <main>
-      <Hero data={clinic} /> 
-      <Services services={services} clinic={clinic}/>
-      <WhyUs features={clinic.features} />
-      <Doctor data={doctor} />   
-      <Testimonials list={clinic.testimonials} />
+    <div className="min-h-screen bg-background">
+      <Header onBookingClick={openBooking} />
       
-      {clinic.gallery && clinic.gallery.length > 0 && (
-        <ClinicGallery clinic={clinic} />
-      )}
-      <Contact data={clinic} />
-    </main>
+      <main>
+        <Hero onBookingClick={openBooking} />
+        <TrustStrip />
+        <Services onBookingClick={openBooking} />
+        <WhyChoose />
+        <Process />
+        <Testimonials/>
+        <FAQ />
+        <TravelSupport />
+      </main>
+
+      <Footer />
+
+      <BookingModal isOpen={isBookingOpen} onClose={closeBooking} />
+    </div>
   );
 }
