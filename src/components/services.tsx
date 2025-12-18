@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Stethoscope, Syringe, Activity, Clock, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
-interface ServicesProps {
-  onBookingClick: () => void;
-}
+
 
 const services = [
   {
@@ -32,7 +31,7 @@ const services = [
   },
 ];
 
-export const Services = ({ onBookingClick }: ServicesProps) => {
+export const Services = () => {
   return (
     <section id="servicios" className="section-padding bg-background">
       <div className="container-custom">
@@ -52,7 +51,6 @@ export const Services = ({ onBookingClick }: ServicesProps) => {
             <ServiceCard
               key={index}
               {...service}
-              onBookingClick={onBookingClick}
               delay={index * 100}
             />
           ))}
@@ -69,7 +67,6 @@ interface ServiceCardProps {
   duration: string;
   benefit: string;
   color: string;
-  onBookingClick: () => void;
   delay: number;
 }
 
@@ -80,7 +77,6 @@ const ServiceCard = ({
   duration,
   benefit,
   color,
-  onBookingClick,
   delay,
 }: ServiceCardProps) => {
   const colorClasses = {
@@ -119,9 +115,8 @@ const ServiceCard = ({
         variant="outline"
         size="sm"
         className="w-full group"
-        onClick={onBookingClick}
       >
-        Reservar
+        <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>Ir a Lymbika</Link>
         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
       </Button>
     </div>

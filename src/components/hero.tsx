@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, MapPin, Video, Building } from "lucide-react";
+import Link from "next/link";
 
-interface HeroProps {
-  onBookingClick: () => void;
-}
 
-export const Hero = ({ onBookingClick }: HeroProps) => {
+export const Hero = () => {
   return (
     <section className="relative h-full pt-20 pb-16 overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
       {/* Background Pattern */}
@@ -62,9 +60,9 @@ export const Hero = ({ onBookingClick }: HeroProps) => {
 
             {/* CTA Buttons - Desktop */}
             <div className="hidden lg:flex items-center gap-4 animate-fade-in-up opacity-0" style={{ animationDelay: '500ms' }}>
-              <Button variant="outline" size="lg" onClick={onBookingClick}>
+              <Button variant="outline" size="lg">
                 <Calendar className="w-5 h-5" />
-                Reservar valoración
+                <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>Ir a Lymbika</Link>
               </Button>
               <Button variant="secondary" size="lg">
                 <Video className="w-5 h-5" />
@@ -122,9 +120,9 @@ export const Hero = ({ onBookingClick }: HeroProps) => {
               </div>
 
               {/* Main CTA */}
-              <Button variant="outline" size="lg" className="w-full mb-3" onClick={onBookingClick}>
+              <Button variant="outline" size="lg" className="w-full mb-3">
                 <Calendar className="w-5 h-5" />
-                Reservar valoración
+                <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>Ir a Lymbika</Link>
               </Button>
 
               {/* Microcopy */}
@@ -141,7 +139,8 @@ export const Hero = ({ onBookingClick }: HeroProps) => {
 
       {/* Mobile Sticky CTA */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-card/95 backdrop-blur-md border-t border-border z-40">
-        <Button variant="outline" size="lg" className="w-full" onClick={onBookingClick}>
+        <Button variant="outline" size="lg" className="w-full">
+          <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>Ir a Lymbika</Link>
           <Calendar className="w-5 h-5" />
           Reservar valoración — $1,500 MXN
         </Button>

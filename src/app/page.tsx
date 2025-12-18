@@ -16,17 +16,16 @@ import { useState } from "react";
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  const openBooking = () => setIsBookingOpen(true);
   const closeBooking = () => setIsBookingOpen(false);
 
   return (
     <div className="min-h-screen bg-background">
-      <Header onBookingClick={openBooking} />
+      <Header/>
       
       <main>
-        <Hero onBookingClick={openBooking} />
+        <Hero />
         <TrustStrip />
-        <Services onBookingClick={openBooking} />
+        <Services />
         <WhyChoose />
         <Process />
         <Testimonials/>

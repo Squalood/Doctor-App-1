@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X, Globe } from "lucide-react";
+import Link from "next/link";
 
-interface HeaderProps {
-  onBookingClick: () => void;
-}
 
-export const Header = ({ onBookingClick }: HeaderProps) => {
+export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [language, setLanguage] = useState<"ES" | "EN">("ES");
@@ -81,10 +79,10 @@ export const Header = ({ onBookingClick }: HeaderProps) => {
             <Button
               variant="outline"
               size="sm"
-              onClick={onBookingClick}
+              //onClick={onBookingClick}
               className="hidden sm:flex"
             >
-              {language === "ES" ? "Reservar valoración" : "Book consultation"}
+              <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>{language === "ES" ? "Ir a Lymbika" : "Go to Lymbika"}</Link>
             </Button>
 
             {/* Mobile Menu Button */}
@@ -112,8 +110,9 @@ export const Header = ({ onBookingClick }: HeaderProps) => {
                 </a>
               ))}
               <div className="pt-4 border-t border-border mt-2">
-                <Button variant="outline" className="w-full" onClick={onBookingClick}>
-                  {language === "ES" ? "Reservar valoración" : "Book consultation"}
+                <Button variant="outline" className="w-full">
+                  
+                  <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>{language === "ES" ? "Reservar valoración" : "Book consultation"}</Link>
                 </Button>
               </div>
             </nav>
