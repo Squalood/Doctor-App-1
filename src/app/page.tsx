@@ -9,7 +9,6 @@ import { Process } from "@/components/process";
 import { Services } from "@/components/services";
 import { Testimonials } from "@/components/testimonials";
 import { TravelSupport } from "@/components/travelSupport";
-import { TrustStrip } from "@/components/trustStrip";
 import { useState } from "react";
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
       
       <main>
         <Hero onBookingClick={openBooking} />
-        <TrustStrip />
         <Services onBookingClick={openBooking} />
         <Process />
         <Testimonials/>
