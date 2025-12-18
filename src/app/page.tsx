@@ -8,7 +8,6 @@ import { Hero } from "@/components/hero";
 import { Process } from "@/components/process";
 import { Services } from "@/components/services";
 import { Testimonials } from "@/components/testimonials";
-import { TravelSupport } from "@/components/travelSupport";
 import { useState } from "react";
 
 export default function Home() {
@@ -27,7 +26,6 @@ export default function Home() {
         <Process />
         <Testimonials/>
         <FAQ />
-        <TravelSupport />
       </main>
 
       <Footer />
