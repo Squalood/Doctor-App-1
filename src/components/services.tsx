@@ -11,7 +11,7 @@ const services = [
   {
     icon: Stethoscope,
     title: "Consulta de valoración",
-    price: "Desde $1,500 MXN",
+    price: "Desde $1,200 MXN",
     duration: "45-60 min",
     benefit: "Diagnóstico preciso con tecnología de imagen avanzada",
     color: "primary",

@@ -37,7 +37,7 @@ interface BookingModalProps {
 type Step = 1 | 2 | 3 | "success";
 
 const services = [
-  { id: "consulta", name: "Consulta de valoración", price: "$1,500 MXN" },
+  { id: "consulta", name: "Consulta de valoración", price: "$1,200 MXN" },
   { id: "infiltracion", name: "Infiltración columna", price: "Desde $8,000 MXN" },
   { id: "cirugia", name: "Cirugía (cotización)", price: "Personalizado" },
 ];
