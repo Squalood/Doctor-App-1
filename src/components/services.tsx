@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Stethoscope, Syringe, Activity, Clock, ArrowRight } from "lucide-react";
+import {
+  Stethoscope,
+  Syringe,
+  Activity,
+  Clock,
+  ArrowRight,
+} from "lucide-react";
 import Link from "next/link";
-
-
 
 const services = [
   {
@@ -16,10 +20,10 @@ const services = [
   {
     icon: Syringe,
     title: "Infiltración columna",
-    price: "Desde $8,000 MXN",
+    price: "Desde $23,999 MXN",
     duration: "~1 hora",
     benefit: "Procedimiento ambulatorio, misma día alta médica",
-    color: "cta",
+    color: "outline",
   },
   {
     icon: Activity,
@@ -41,18 +45,15 @@ export const Services = () => {
             Servicios especializados
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Atención integral en neurocirugía con los más altos estándares de calidad
+            Atención integral en neurocirugía con los más altos estándares de
+            calidad
           </p>
         </div>
 
         {/* Service Cards */}
         <div className="grid md:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              {...service}
-              delay={index * 100}
-            />
+            <ServiceCard key={index} {...service} delay={index * 100} />
           ))}
         </div>
       </div>
@@ -79,11 +80,12 @@ const ServiceCard = ({
   color,
   delay,
 }: ServiceCardProps) => {
-  const colorClasses = {
-    primary: "bg-primary/10 text-primary",
-    cta: "bg-cta/10 text-cta",
-    accent: "bg-accent/10 text-accent",
-  }[color] || "bg-primary/10 text-primary";
+  const colorClasses =
+    {
+      primary: "bg-primary/10 text-primary",
+      cta: "bg-cta/10 text-cta",
+      accent: "bg-accent/10 text-accent",
+    }[color] || "bg-primary/10 text-primary";
 
   return (
     <div
@@ -91,12 +93,16 @@ const ServiceCard = ({
       style={{ animationDelay: `${delay}ms` }}
     >
       {/* Icon */}
-      <div className={`w-14 h-14 rounded-xl ${colorClasses} flex items-center justify-center mb-5`}>
+      <div
+        className={`w-14 h-14 rounded-xl ${colorClasses} flex items-center justify-center mb-5`}
+      >
         <Icon className="w-7 h-7" />
       </div>
 
       {/* Title */}
-      <h3 className="font-heading text-xl font-bold text-foreground mb-2">{title}</h3>
+      <h3 className="font-heading text-xl font-bold text-foreground mb-2">
+        {title}
+      </h3>
 
       {/* Price & Duration */}
       <div className="flex items-center gap-3 mb-4">
@@ -111,13 +117,13 @@ const ServiceCard = ({
       <p className="text-muted-foreground text-sm grow mb-6">{benefit}</p>
 
       {/* CTA */}
-      <Button
-        variant="outline"
-        size="sm"
-        className="w-full group"
-      >
-        <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>Ir a Lymbika</Link>
-        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+      <Button variant="outline" size="sm" asChild>
+        <Link
+          href="https://lymbika.com/clinics/clinica-de-neurologia"
+          className="flex items-center gap-2"
+        >
+          <span>Ir a Lymbika</span>
+        </Link>
       </Button>
     </div>
   );

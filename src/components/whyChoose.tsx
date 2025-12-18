@@ -88,7 +88,7 @@ export const WhyChoose = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Ver procedimiento</p>
-                  <p className="text-sm text-muted-foreground">Infiltración de columna (15 seg)</p>
+                  <p className="text-sm text-muted-foreground">Infiltración de columna</p>
                 </div>
               </div>
             </div>

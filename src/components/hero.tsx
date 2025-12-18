@@ -3,39 +3,61 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, MapPin, Video, Building } from "lucide-react";
 import Link from "next/link";
 
-
 export const Hero = () => {
   return (
-    <section className="relative h-full pt-20 pb-16 overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+    <section
+      className="relative h-full pt-20 pb-16 overflow-hidden"
+      style={{ background: "var(--gradient-hero)" }}
+    >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230057D1' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-      }} />
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230057D1' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      />
 
       <div className="container-custom relative">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Column - Doctor Info */}
           <div className="order-2 lg:order-1 pt-8 lg:pt-16">
             {/* Trust Badge */}
-            <div className="animate-fade-in-up opacity-0" style={{ animationDelay: '100ms' }}>
+            <div
+              className="animate-fade-in-up opacity-0"
+              style={{ animationDelay: "100ms" }}
+            >
               <Badge className="bg-secondary text-secondary-foreground border-0 px-4 py-1.5 text-sm font-medium mb-6">
                 ✓ Verified by Lymbika
               </Badge>
             </div>
 
             {/* Heading */}
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4 animate-fade-in-up opacity-0" style={{ animationDelay: '200ms' }}>
+            <h1
+              className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-4 animate-fade-in-up opacity-0"
+              style={{ animationDelay: "200ms" }}
+            >
               Dr. José Orlando Guinto
               <span className="block text-primary mt-2">Neurocirugía</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-6 animate-fade-in-up opacity-0" style={{ animationDelay: '300ms' }}>
+            <p
+              className="text-lg md:text-xl text-muted-foreground mb-6 animate-fade-in-up opacity-0"
+              style={{ animationDelay: "300ms" }}
+            >
               Valoración • Infiltraciones • Cirugía
-              <span className="block mt-1">Atención en Star Médica. <span className="text-primary font-medium">English friendly.</span></span>
+              <span className="block mt-1">
+                Atención en Star Médica.{" "}
+                <span className="text-primary font-medium">
+                  English friendly.
+                </span>
+              </span>
             </p>
 
             {/* Location Tags */}
-            <div className="flex flex-wrap gap-3 mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: '400ms' }}>
+            <div
+              className="flex flex-wrap gap-3 mb-8 animate-fade-in-up opacity-0"
+              style={{ animationDelay: "400ms" }}
+            >
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-card rounded-full text-sm font-medium text-foreground shadow-sm border border-border/50">
                 <MapPin className="w-4 h-4 text-primary" />
                 Ciudad Juárez
@@ -47,11 +69,14 @@ export const Hero = () => {
             </div>
 
             {/* Doctor Image - Mobile */}
-            <div className="lg:hidden mb-8 animate-fade-in-up opacity-0" style={{ animationDelay: '350ms' }}>
+            <div
+              className="lg:hidden mb-8 animate-fade-in-up opacity-0"
+              style={{ animationDelay: "350ms" }}
+            >
               <div className="relative w-64 h-64 mx-auto">
                 <div className="absolute inset-0 rounded-2xl bg-primary/10" />
                 <img
-                  src="/dr-guinto.png"
+                  src="/dr-guinto.jpg"
                   alt="Dr. José Orlando Guinto Nava - Neurocirujano"
                   className="relative w-full h-full object-cover object-top rounded-2xl shadow-xl"
                 />
@@ -59,11 +84,20 @@ export const Hero = () => {
             </div>
 
             {/* CTA Buttons - Desktop */}
-            <div className="hidden lg:flex items-center gap-4 animate-fade-in-up opacity-0" style={{ animationDelay: '500ms' }}>
-              <Button variant="outline" size="lg">
-                <Calendar className="w-5 h-5" />
-                <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>Ir a Lymbika</Link>
+            <div
+              className="hidden lg:flex items-center gap-4 animate-fade-in-up opacity-0"
+              style={{ animationDelay: "500ms" }}
+            >
+              <Button variant="outline" size="lg" asChild>
+                <Link
+                  href="https://lymbika.com/clinics/clinica-de-neurologia"
+                  className="flex items-center gap-2"
+                >
+                  <Calendar className="h-5 w-5" />
+                  <span>Ir a Lymbika</span>
+                </Link>
               </Button>
+
               <Button variant="secondary" size="lg">
                 <Video className="w-5 h-5" />
                 Ver video
@@ -74,11 +108,14 @@ export const Hero = () => {
           {/* Right Column - Booking Card + Doctor Image */}
           <div className="order-1 lg:order-2 lg:sticky lg:top-24">
             {/* Doctor Image - Desktop */}
-            <div className="hidden lg:block relative mb-6 animate-fade-in-up opacity-0" style={{ animationDelay: '200ms' }}>
+            <div
+              className="hidden lg:block relative mb-6 animate-fade-in-up opacity-0"
+              style={{ animationDelay: "200ms" }}
+            >
               <div className="relative w-80 h-80 mx-auto">
                 <div className="absolute -inset-4 rounded-3xl bg-linear-to-br from-primary/20 to-cta/20 blur-2xl" />
                 <img
-                  src="/dr-guinto.png"
+                  src="/dr-guinto.jpg"
                   alt="Dr. José Orlando Guinto Nava - Neurocirujano"
                   className="relative w-full h-full object-cover object-top rounded-2xl shadow-xl"
                 />
@@ -86,12 +123,20 @@ export const Hero = () => {
             </div>
 
             {/* Booking Card */}
-            <div className="card-elevated p-6 animate-slide-up opacity-0" style={{ animationDelay: '400ms' }}>
+            <div
+              className="card-elevated p-6 animate-slide-up opacity-0"
+              style={{ animationDelay: "400ms" }}
+            >
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <p className="text-sm text-muted-foreground">Valoración desde</p>
+                  <p className="text-sm text-muted-foreground">
+                    Valoración desde
+                  </p>
                   <p className="text-3xl font-heading font-bold text-foreground">
-                    $1,500 <span className="text-base font-normal text-muted-foreground">MXN</span>
+                    $1,200{" "}
+                    <span className="text-base font-normal text-muted-foreground">
+                      MXN
+                    </span>
                   </p>
                 </div>
                 <div className="flex items-center gap-1 text-accent">
@@ -111,18 +156,24 @@ export const Hero = () => {
                 </button>
               </div>
 
-              {/* Next Availability */}
+              {/* Next Availability 
               <div className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg mb-4">
                 <Clock className="w-4 h-4 text-cta" />
                 <span className="text-sm text-foreground">
                   <span className="font-medium">Próximo disponible:</span> Martes, 10 Dic
                 </span>
               </div>
+              */}
 
               {/* Main CTA */}
-              <Button variant="outline" size="lg" className="w-full mb-3">
-                <Calendar className="w-5 h-5" />
-                <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>Ir a Lymbika</Link>
+              <Button variant="outline" size="lg" asChild>
+                <Link
+                  href="https://lymbika.com/clinics/clinica-de-neurologia"
+                  className="flex items-center gap-2 w-full my-4"
+                >
+                  <Calendar className="h-5 w-5" />
+                  <span>Ir a Lymbika</span>
+                </Link>
               </Button>
 
               {/* Microcopy */}
@@ -139,10 +190,14 @@ export const Hero = () => {
 
       {/* Mobile Sticky CTA */}
       <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-card/95 backdrop-blur-md border-t border-border z-40">
-        <Button variant="outline" size="lg" className="w-full">
-          <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>Ir a Lymbika</Link>
-          <Calendar className="w-5 h-5" />
-          Reservar valoración — $1,500 MXN
+        <Button variant="outline" size="lg" asChild>
+          <Link
+            href="https://lymbika.com/clinics/clinica-de-neurologia"
+            className="flex items-center gap-2"
+          >
+            <Calendar className="h-5 w-5" />
+            <span>Ir a Lymbika</span>
+          </Link>
         </Button>
       </div>
     </section>

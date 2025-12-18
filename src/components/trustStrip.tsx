@@ -16,7 +16,7 @@ const stats = [
   },
   {
     icon: Shield,
-    value: 2500,
+    value: 1000,
     suffix: "+",
     label: "Procedimientos",
     isNumber: true,

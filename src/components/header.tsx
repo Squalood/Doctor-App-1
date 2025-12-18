@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X, Globe } from "lucide-react";
+import { Phone, Menu, X, Globe, Calendar } from "lucide-react";
 import Link from "next/link";
 
 
@@ -37,7 +37,7 @@ export const Header = () => {
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
             <span className="font-heading font-bold text-xl text-primary hidden sm:block">
-              Lymbika
+              Lymbika Healthcare
             </span>
           </a>
 
@@ -78,12 +78,19 @@ export const Header = () => {
             {/* CTA Button */}
             <Button
               variant="outline"
-              size="sm"
+              size="lg"
               //onClick={onBookingClick}
-              className="hidden sm:flex"
+              asChild
             >
-              <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>{language === "ES" ? "Ir a Lymbika" : "Go to Lymbika"}</Link>
+              <Link
+                  href="https://lymbika.com/clinics/clinica-de-neurologia"
+                  className="flex items-center gap-2"
+                >
+                  <Calendar className="h-5 w-5" />
+                  <span>Ir a Lymbika</span>
+                </Link>
             </Button>
+
 
             {/* Mobile Menu Button */}
             <button
@@ -110,10 +117,16 @@ export const Header = () => {
                 </a>
               ))}
               <div className="pt-4 border-t border-border mt-2">
-                <Button variant="outline" className="w-full">
-                  
-                  <Link href={`https://lymbika.com/clinics/clinica-de-neurologia`}>{language === "ES" ? "Reservar valoración" : "Book consultation"}</Link>
+                <Button variant="outline" size="lg" asChild>
+                  <Link
+                    href="https://lymbika.com/clinics/clinica-de-neurologia"
+                    className="flex items-center gap-2"
+                  >
+                    <Calendar className="h-5 w-5" />
+                    <span>Ir a Lymbika</span>
+                  </Link>
                 </Button>
+                
               </div>
             </nav>
           </div>
