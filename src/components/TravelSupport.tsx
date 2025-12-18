@@ -65,7 +65,7 @@ export const TravelSupport = () => {
             </div>
 
             {/* CTA */}
-            <Button variant="cta" size="lg">
+            <Button variant="outline" size="lg">
               <MessageCircle className="w-5 h-5" />
               Contactar Medical Agent
             </Button>

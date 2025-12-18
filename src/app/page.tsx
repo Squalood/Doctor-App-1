@@ -3,13 +3,14 @@
 import { BookingModal } from "@/components/BookingModal";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Process } from "@/components/Process";
 import { Services } from "@/components/Services";
+import { Testimonials } from "@/components/Testimonials";
 import { TravelSupport } from "@/components/TravelSupport";
 import { TrustStrip } from "@/components/TrustStrip";
 import { WhyChoose } from "@/components/WhyChoose";
+import { Header } from "@radix-ui/react-accordion";
 import { useState } from "react";
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         <Services onBookingClick={openBooking} />
         <WhyChoose />
         <Process />
+        <Testimonials/>
         <FAQ />
         <TravelSupport />
       </main>
