@@ -1,5 +1,4 @@
 import { Building, Award, Users, MessageCircle, Play } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const features = [
   {

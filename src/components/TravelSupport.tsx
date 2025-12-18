@@ -26,7 +26,7 @@ const supportItems = [
 
 export const TravelSupport = () => {
   return (
-    <section className="section-padding bg-gradient-to-br from-primary/5 to-cta/5">
+    <section className="section-padding bg-linear-to-br from-primary/5 to-cta/5">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -53,7 +53,7 @@ export const TravelSupport = () => {
                   className="flex items-start gap-3 p-4 bg-card rounded-xl border border-border/50 animate-fade-in-up opacity-0"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
