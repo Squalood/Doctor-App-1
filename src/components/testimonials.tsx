@@ -90,7 +90,7 @@ const TestimonialCard = ({
       </div>
 
       {/* Quote */}
-      <blockquote className="text-foreground flex-grow mb-6">"{quote}"</blockquote>
+      <blockquote className="text-foreground grow mb-6">"{quote}"</blockquote>
 
       {/* Author */}
       <div className="flex items-center justify-between">
