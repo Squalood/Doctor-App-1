@@ -72,7 +72,7 @@ export const Header = () => {
               className="hidden md:flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>+52 656 123 4567</span>
+              <span>+52 656 110 0446</span>
             </a>
 
             {/* CTA Button */}
