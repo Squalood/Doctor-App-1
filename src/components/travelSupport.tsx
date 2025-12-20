@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Plane, Hotel, Car, Languages, MessageCircle } from "lucide-react";
+import { Plane, Hotel, Car, Languages, Calendar } from "lucide-react";
+import Link from "next/link";
 
 const supportItems = [
   {
@@ -65,10 +66,15 @@ export const TravelSupport = () => {
             </div>
 
             {/* CTA */}
-            <Button variant="outline" size="lg">
-              <MessageCircle className="w-5 h-5" />
-              Contactar Medical Agent
-            </Button>
+            <Button variant="outline" size="lg" asChild>
+                <Link
+                  href="https://lymbika.com/clinics/clinica-de-neurologia"
+                  className="flex items-center gap-2 w-full my-4"
+                >
+                  <Calendar className="h-5 w-5" />
+                  <span>Ir a Lymbika</span>
+                </Link>
+              </Button>
           </div>
 
           {/* Right - Map/Visual */}
